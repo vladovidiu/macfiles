@@ -23,6 +23,7 @@ opt.conceallevel = 0
 opt.showmode = false
 opt.scrolloff = 5
 opt.whichwrap = 'b,s,<,>,[,],h,l'
+
 opt.list = true
 opt.listchars:append("tab:»\\ ")
 opt.listchars:append("extends:›")
@@ -40,6 +41,7 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.autoindent = true
+vim.bo.copyindent = true
 vim.o.expandtab = true
 
 vim.g.loaded_machparen = 1

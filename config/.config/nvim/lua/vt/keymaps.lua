@@ -9,8 +9,9 @@ vim.g.maplocalleader = " "
 
 map("n", "<leader>e", ":Lex 30<cr>", opts)
 map("n", "<leader>bs", ":w<cr>", opts)
+
 map("i", "jk", "<ESC>", opts)
-map("i", "kj", "<ESC>", opts)
+
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
