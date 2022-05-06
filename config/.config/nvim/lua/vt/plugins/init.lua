@@ -1,2 +1,5 @@
-require "vt.plugins.cmp"
-require "vt.plugins.lspkind"
+require("vt.plugins.cmp")
+require("vt.plugins.telescope")
+require("vt.plugins.treesitter")
+require("vt.plugins.lsp_signature")
+--require("vt.plugins.feline")

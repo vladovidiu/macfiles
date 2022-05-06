@@ -13,16 +13,18 @@ opt.smartindent = true
 opt.splitbelow = true
 opt.splitright = true
 opt.swapfile = false
---opt.termguicolors = false
+opt.termguicolors = true
 opt.undofile = true
 opt.updatetime = 300
 opt.timeoutlen = 300
 opt.expandtab = true
-opt.undodir = "./.vim/undodir"
+opt.undodir = vim.fn.stdpath("cache") .. "/undodir"
 opt.conceallevel = 0
 opt.showmode = false
 opt.scrolloff = 5
-opt.whichwrap = 'b,s,<,>,[,],h,l'
+opt.signcolumn = "yes"
+opt.whichwrap = "b,s,<,>,[,],h,l"
+opt.laststatus = 3
 
 opt.list = true
 opt.listchars:append("tab:»\\ ")
