@@ -1,5 +1,6 @@
 require("vt.options")
 require("vt.keymaps")
+require("vt.functions")
 require("vt.plugins_bootstrap")
 require("vt.plugins")
 require("vt.lsp")

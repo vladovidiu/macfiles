@@ -101,6 +101,9 @@ return packer.startup(function(use)
   -- Dev Icons
   use("kyazdani42/nvim-web-devicons")
 
+  -- Notify
+  use("rcarriga/nvim-notify")
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
