@@ -112,7 +112,7 @@ components.active[1][3] = {
 		style = "bold",
 	},
 	right_sep = {
-		str = " > ",
+		str = "  ",
 		hl = {
 			fg = "white",
 			bg = "bg",
