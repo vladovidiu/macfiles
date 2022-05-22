@@ -29,3 +29,7 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
 -- Neogit
 map("n", "<leader>gg", "<cmd>Neogit<cr>", opts)
+
+-- Float term
+map("n", "<leader>tt", '<CMD>lua require("FTerm").toggle()<CR>')
+map("t", "<leader>tt", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

@@ -45,6 +45,7 @@ vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.bo.copyindent = true
 vim.o.expandtab = true
+vim.o.colorcolumn = "80"
 
 vim.g.loaded_machparen = 1
 vim.g.loaded_matchit = 1

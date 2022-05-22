@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FTerm.nvim"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
+    url = "https://github.com/numToStr/FTerm.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -114,11 +119,26 @@ _G.packer_plugins = {
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox-flat.nvim"] = {
-    config = { "\27LJ\2\nÏ\1\0\0\3\0\b\0\0176\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0005\1\4\0=\1\3\0006\0\0\0009\0\1\0+\1\2\0=\1\5\0006\0\0\0009\0\6\0'\2\a\0B\0\2\1K\0\1\0,        colorscheme gruvbox-flat\n      \bcmd\24gruvbox_transparent\1\3\0\0\vpacker\rterminal\21gruvbox_sidebars\29gruvbox_italic_functions\6g\bvim\0" },
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
-    url = "https://github.com/eddyekofo94/gruvbox-flat.nvim"
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
+  gruvbox = {
+    config = { "\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4        let g:gruvbox_contrast_dark = 'hard'\n        let g:gruvbox_invert_selection='0'\n        colorscheme gruvbox\n        highlight ColorColumn ctermbg=0 guibg=grey\n        hi SignColumn guibg=none\n        hi CursorLineNR guibg=None\n        highlight Normal guibg=none\n        highlight NormalFloat guibg=none\n        highlight FloatBorder guibg=#5eacd\n        \" highlight LineNr guifg=#ff8659\n        \" highlight LineNr guifg=#aed75f\n        highlight LineNr guifg=#5eacd3\n        highlight netrwDir guifg=#5eacd3\n        highlight qfFileName guifg=#aed75f\n        hi TelescopeBorder guifg=#5eacd\n      \bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/gruvbox-community/gruvbox"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -144,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -213,10 +238,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gruvbox-flat.nvim
-time([[Config for gruvbox-flat.nvim]], true)
-try_loadstring("\27LJ\2\nÏ\1\0\0\3\0\b\0\0176\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0005\1\4\0=\1\3\0006\0\0\0009\0\1\0+\1\2\0=\1\5\0006\0\0\0009\0\6\0'\2\a\0B\0\2\1K\0\1\0,        colorscheme gruvbox-flat\n      \bcmd\24gruvbox_transparent\1\3\0\0\vpacker\rterminal\21gruvbox_sidebars\29gruvbox_italic_functions\6g\bvim\0", "config", "gruvbox-flat.nvim")
-time([[Config for gruvbox-flat.nvim]], false)
+-- Config for: gruvbox
+time([[Config for gruvbox]], true)
+try_loadstring("\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4        let g:gruvbox_contrast_dark = 'hard'\n        let g:gruvbox_invert_selection='0'\n        colorscheme gruvbox\n        highlight ColorColumn ctermbg=0 guibg=grey\n        hi SignColumn guibg=none\n        hi CursorLineNR guibg=None\n        highlight Normal guibg=none\n        highlight NormalFloat guibg=none\n        highlight FloatBorder guibg=#5eacd\n        \" highlight LineNr guifg=#ff8659\n        \" highlight LineNr guifg=#aed75f\n        highlight LineNr guifg=#5eacd3\n        highlight netrwDir guifg=#5eacd3\n        highlight qfFileName guifg=#aed75f\n        hi TelescopeBorder guifg=#5eacd\n      \bcmd\bvim\0", "config", "gruvbox")
+time([[Config for gruvbox]], false)
 if should_profile then save_profiles() end
 
 end)
