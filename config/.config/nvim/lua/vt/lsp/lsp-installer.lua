@@ -8,11 +8,21 @@ if not go_status_ok then
 	return
 end
 
-go.setup()
+local rust_status_ok, rust_tools = pcall(require, "rust-tools")
+if not rust_status_ok then
+	return
+end
+
+go.setup({
+	test_runner = "richgo",
+	run_in_floaterm = true,
+})
+
+rust_tools.setup({})
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "gopls", "sumneko_lua" }
+local servers = { "jsonls", "gopls", "sumneko_lua", "tsserver" }
 
 lsp_installer.setup({
 	ensure_installed = servers,

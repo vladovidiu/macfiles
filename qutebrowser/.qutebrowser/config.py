@@ -1142,7 +1142,7 @@ c.fonts.default_family = ['PragmataPro Mono Liga']
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '14pt'
+c.fonts.default_size = '18pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
