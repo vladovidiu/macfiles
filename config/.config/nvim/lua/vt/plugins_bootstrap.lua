@@ -92,6 +92,10 @@ return packer.startup(function(use)
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 
+	-- Telescope extensions
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("nvim-telescope/telescope-packer.nvim")
+
 	-- TreeSitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -111,6 +115,9 @@ return packer.startup(function(use)
 
 	-- go.nvim
 	use("ray-x/go.nvim")
+
+	-- rust
+	use("simrat39/rust-tools.nvim")
 
 	-- Float term, codeaction, codelens gui
 	use({ "ray-x/guihua.lua", run = "cd lua/fzy && make" })
@@ -132,6 +139,17 @@ return packer.startup(function(use)
 		"SmiteshP/nvim-gps",
 		requires = "nvim-treesitter/nvim-treesitter",
 	})
+
+	-- Comment
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+
+	-- Better Escape
+	use("max397574/better-escape.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -11,8 +11,6 @@ map("n", "<leader>e", ":Lex 30<cr>", opts)
 map("n", "<leader>bs", ":w<cr>", opts)
 map("n", "<leader><esc>", ":nohlsearch<cr>", opts)
 
-map("i", "jk", "<ESC>", opts)
-
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
