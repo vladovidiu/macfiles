@@ -103,6 +103,8 @@ return packer.startup(function(use)
 	})
 	use("p00f/nvim-ts-rainbow")
 	use("nvim-treesitter/playground")
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Feline
 	use("feline-nvim/feline.nvim")

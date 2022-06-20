@@ -22,7 +22,7 @@ rust_tools.setup({})
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "gopls", "sumneko_lua", "tsserver" }
+local servers = { "jsonls", "gopls", "sumneko_lua", "tsserver", "cssls", "prismals", "tailwindcss" }
 
 lsp_installer.setup({
 	ensure_installed = servers,

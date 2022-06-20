@@ -5,16 +5,19 @@
         "revision": "54d7aae24408323cfa2e1f36e58389d8d0c4d118"
       },
       "homebrew/bundle": {
-        "revision": "f93f4a78aa22081ecd313333f35f211cc782ec9b"
+        "revision": "5e7826f5b7f075478796081cd33a247f44882c5c"
       },
       "homebrew/cask": {
-        "revision": "f7329671282c120a8e703f3c1b9e8c1aecde7f07"
+        "revision": "bc01a2aa0524ef3d99390e0d81b682e7f5056ccd"
       },
       "homebrew/cask-fonts": {
-        "revision": "2fab390cbf9c427d58477bd9d25e2dc96cfaad2c"
+        "revision": "b450f4239ca424582456a92bd0da232bcf4d4de6"
       },
       "homebrew/core": {
-        "revision": "638615e61b1ad8c8e3a551d36a52d545016b3cfa"
+        "revision": "0a8b1c40ff006f18e15d36424c893ac4ea8be7e3"
+      },
+      "wez/wezterm": {
+        "revision": "3f0a7d0fef6e633a2db2ceead690d61c04e31013"
       }
     },
     "brew": {
@@ -416,7 +419,7 @@
     },
     "cask": {
       "font-iosevka-aile": {
-        "version": "15.5.0",
+        "version": "15.5.1",
         "options": {
           "full_name": "font-iosevka-aile"
         }
@@ -434,7 +437,7 @@
         }
       },
       "brave-browser": {
-        "version": "1.39.120.0,139.120",
+        "version": "1.39.122.0,139.122",
         "options": {
           "full_name": "brave-browser"
         }
@@ -446,13 +449,13 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.68.0",
+        "version": "1.68.1",
         "options": {
           "full_name": "visual-studio-code"
         }
       },
       "docker": {
-        "version": "4.9.0,80466",
+        "version": "4.9.1,81317",
         "options": {
           "full_name": "docker"
         }
@@ -482,7 +485,7 @@
         }
       },
       "logseq": {
-        "version": "0.7.3",
+        "version": "0.7.4",
         "options": {
           "full_name": "logseq"
         }
@@ -498,17 +501,29 @@
         "options": {
           "full_name": "discord"
         }
+      },
+      "gog-galaxy": {
+        "version": "2.0.51.58",
+        "options": {
+          "full_name": "gog-galaxy"
+        }
+      },
+      "wezterm": {
+        "version": "20220408-101518,b908e2dd",
+        "options": {
+          "full_name": "wez/wezterm/wezterm"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.5.1",
+        "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "638615e61b1ad8c8e3a551d36a52d545016b3cfa",
+        "Homebrew/homebrew-core": "0a8b1c40ff006f18e15d36424c893ac4ea8be7e3",
         "CLT": "13.4.0.0.1.1651278267",
-        "Xcode": "13.4",
+        "Xcode": "13.4.1",
         "macOS": "12.4"
       }
     }

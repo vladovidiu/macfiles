@@ -13,7 +13,7 @@ telescope.setup({
 		},
 	},
 	defaults = {
-		file_ignore_patterns = { "node_modules" },
+		file_ignore_patterns = { "node_modules", "public/build" },
 		vimgrep_arguments = {
 			"rg",
 			"--color=never",
@@ -23,7 +23,6 @@ telescope.setup({
 			"--column",
 			"--smart-case",
 		},
-		path_display = { "smart" },
 	},
 })
 
