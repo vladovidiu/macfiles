@@ -5,16 +5,16 @@
         "revision": "54d7aae24408323cfa2e1f36e58389d8d0c4d118"
       },
       "homebrew/bundle": {
-        "revision": "5e7826f5b7f075478796081cd33a247f44882c5c"
+        "revision": "c5686db55e69b4ac128a28bbcd8a571c4ac76112"
       },
       "homebrew/cask": {
-        "revision": "bc01a2aa0524ef3d99390e0d81b682e7f5056ccd"
+        "revision": "d2c1c6e2ae417d77ed379d6155cad4c417e69825"
       },
       "homebrew/cask-fonts": {
-        "revision": "b450f4239ca424582456a92bd0da232bcf4d4de6"
+        "revision": "0e5448decdc8e31d98af2ea53d6ba2593d20271c"
       },
       "homebrew/core": {
-        "revision": "0a8b1c40ff006f18e15d36424c893ac4ea8be7e3"
+        "revision": "29eff7ff8eceae892eed459a941ef15466779747"
       },
       "wez/wezterm": {
         "revision": "3f0a7d0fef6e633a2db2ceead690d61c04e31013"
@@ -139,7 +139,7 @@
         }
       },
       "neovim": {
-        "version": "0.7.0",
+        "version": "HEAD-f479dd0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -175,6 +175,11 @@
               "sha256": "0676404738239fdb2d03a2af7c5c381240ad7beaa7b42038d8e2b11519357163"
             }
           }
+        },
+        "options": {
+          "args": [
+            "HEAD"
+          ]
         }
       },
       "d12frosted/emacs-plus/emacs-plus@28": {
@@ -521,7 +526,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "0a8b1c40ff006f18e15d36424c893ac4ea8be7e3",
+        "Homebrew/homebrew-core": "29eff7ff8eceae892eed459a941ef15466779747",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.4"

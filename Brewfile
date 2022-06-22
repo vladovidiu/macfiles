@@ -11,7 +11,7 @@ brew 'tree'
 brew 'btop'
 brew 'wget'
 
-brew 'neovim'
+brew 'neovim', args: %w[HEAD]
 brew 'd12frosted/emacs-plus/emacs-plus@28', args: %w[with-modern-doom3-icon with-native-comp]
 
 brew 'chruby'
