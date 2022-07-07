@@ -22,7 +22,17 @@ rust_tools.setup({})
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "gopls", "sumneko_lua", "tsserver", "cssls", "prismals", "tailwindcss" }
+local servers = {
+	"jsonls",
+	"gopls",
+	"sumneko_lua",
+	"tsserver",
+	"cssls",
+	"prismals",
+	"tailwindcss",
+	"rust_analyzer",
+	"taplo",
+}
 
 lsp_installer.setup({
 	ensure_installed = servers,
@@ -39,5 +49,14 @@ for _, server in pairs(servers) do
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end
+
+	if server == "rust_analyzer" then
+		local rust_opts = require("vt.lsp.settings.rust")
+
+		rust_tools.setup(rust_opts)
+		goto continue
+	end
+
 	lspconfig[server].setup(opts)
+	::continue::
 end

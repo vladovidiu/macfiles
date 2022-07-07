@@ -21,6 +21,8 @@ brew 'stylua'
 brew 'golang'
 brew 'golangci-lint'
 
+brew 'rust-analyzer'
+
 cask 'font-iosevka-aile'
 cask 'font-iosevka-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
