@@ -28,6 +28,7 @@ cask 'font-iosevka-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
 
 cask 'brave-browser'
+cask 'librewolf'
 cask 'spotify'
 cask 'visual-studio-code'
 cask 'docker'

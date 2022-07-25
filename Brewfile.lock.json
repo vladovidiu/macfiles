@@ -8,13 +8,13 @@
         "revision": "a4ce1156648a24ec0edd47d3a9f4cd16af689082"
       },
       "homebrew/cask": {
-        "revision": "9b4238f9f7c5b392d76085495afa461bc641db19"
+        "revision": "310084353af3d36d19b1d78026fa00058ecf0740"
       },
       "homebrew/cask-fonts": {
         "revision": "057549c676d52464fe639681eb000c72cdff8f27"
       },
       "homebrew/core": {
-        "revision": "f2133f74105616fd40c6b0ed01eb6e79de947a8d"
+        "revision": "77750ed565cd6079ed27a90f837a4ef36b0b98ec"
       },
       "wez/wezterm": {
         "revision": "d431007de1e2d31d3fa2fac8e40f25bc972e3e26"
@@ -488,7 +488,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.68.1",
+        "version": "1.69.0",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -552,6 +552,12 @@
         "options": {
           "full_name": "wez/wezterm/wezterm"
         }
+      },
+      "librewolf": {
+        "version": "102.0,2,829840a978bd03cd57376e47dc3219ff",
+        "options": {
+          "full_name": "librewolf"
+        }
       }
     }
   },
@@ -560,7 +566,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f2133f74105616fd40c6b0ed01eb6e79de947a8d",
+        "Homebrew/homebrew-core": "77750ed565cd6079ed27a90f837a4ef36b0b98ec",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.4"

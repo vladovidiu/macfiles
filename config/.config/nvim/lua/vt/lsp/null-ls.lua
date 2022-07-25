@@ -18,6 +18,7 @@ null_ls.setup({
 		formatting.prettierd,
 		formatting.stylua,
 		formatting.gofmt,
+		formatting.rustfmt,
 	},
 	on_attach = function(client)
 		if client.server_capabilities.documentFormattingProvider then
