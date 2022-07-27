@@ -47,22 +47,22 @@ return packer.startup(function(use)
 		"gruvbox-community/gruvbox",
 		config = function()
 			vim.cmd([[
-        let g:gruvbox_contrast_dark = 'hard'
-        let g:gruvbox_invert_selection='0'
-        colorscheme gruvbox
-        highlight ColorColumn ctermbg=0 guibg=grey
-        hi SignColumn guibg=none
-        hi CursorLineNR guibg=None
-        highlight Normal guibg=none
-        highlight NormalFloat guibg=none
-        highlight FloatBorder guibg=#5eacd
-        " highlight LineNr guifg=#ff8659
-        " highlight LineNr guifg=#aed75f
-        highlight LineNr guifg=#5eacd3
-        highlight netrwDir guifg=#5eacd3
-        highlight qfFileName guifg=#aed75f
-        hi TelescopeBorder guifg=#5eacd
-      ]])
+			     let g:gruvbox_contrast_dark = 'hard'
+			     let g:gruvbox_invert_selection='0'
+			     colorscheme gruvbox
+			     highlight ColorColumn ctermbg=0 guibg=grey
+			     hi SignColumn guibg=none
+			     hi CursorLineNR guibg=None
+			     highlight Normal guibg=none
+			     highlight NormalFloat guibg=none
+			     highlight FloatBorder guibg=#5eacd
+			     " highlight LineNr guifg=#ff8659
+			     " highlight LineNr guifg=#aed75f
+			     highlight LineNr guifg=#5eacd3
+			     highlight netrwDir guifg=#5eacd3
+			     highlight qfFileName guifg=#aed75f
+			     hi TelescopeBorder guifg=#5eacd
+			   ]])
 		end,
 	})
 
@@ -72,6 +72,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-nvim-lua")
 	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 
@@ -153,6 +154,20 @@ return packer.startup(function(use)
 
 	-- Better Escape
 	use("max397574/better-escape.nvim")
+
+	-- ui improvements
+	use({
+		"stevearc/dressing.nvim",
+		config = function()
+			require("dressing").setup()
+		end,
+	})
+
+	use({ "kosayoda/nvim-lightbulb", requires = { "antoinemadec/FixCursorHold.nvim" } })
+
+	use("folke/lsp-colors.nvim")
+
+	use("weilbith/nvim-code-action-menu")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

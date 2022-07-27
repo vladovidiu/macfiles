@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
     url = "https://github.com/numToStr/FTerm.nvim"
   },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -105,6 +110,11 @@ _G.packer_plugins = {
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
@@ -119,6 +129,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["dressing.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0" },
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
   },
   ["feline.nvim"] = {
     loaded = true,
@@ -141,7 +157,7 @@ _G.packer_plugins = {
     url = "https://github.com/ray-x/go.nvim"
   },
   gruvbox = {
-    config = { "\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4        let g:gruvbox_contrast_dark = 'hard'\n        let g:gruvbox_invert_selection='0'\n        colorscheme gruvbox\n        highlight ColorColumn ctermbg=0 guibg=grey\n        hi SignColumn guibg=none\n        hi CursorLineNR guibg=None\n        highlight Normal guibg=none\n        highlight NormalFloat guibg=none\n        highlight FloatBorder guibg=#5eacd\n        \" highlight LineNr guifg=#ff8659\n        \" highlight LineNr guifg=#aed75f\n        highlight LineNr guifg=#5eacd3\n        highlight netrwDir guifg=#5eacd3\n        highlight qfFileName guifg=#aed75f\n        hi TelescopeBorder guifg=#5eacd\n      \bcmd\bvim\0" },
+    config = { "\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4\t\t\t     let g:gruvbox_contrast_dark = 'hard'\n\t\t\t     let g:gruvbox_invert_selection='0'\n\t\t\t     colorscheme gruvbox\n\t\t\t     highlight ColorColumn ctermbg=0 guibg=grey\n\t\t\t     hi SignColumn guibg=none\n\t\t\t     hi CursorLineNR guibg=None\n\t\t\t     highlight Normal guibg=none\n\t\t\t     highlight NormalFloat guibg=none\n\t\t\t     highlight FloatBorder guibg=#5eacd\n\t\t\t     \" highlight LineNr guifg=#ff8659\n\t\t\t     \" highlight LineNr guifg=#aed75f\n\t\t\t     highlight LineNr guifg=#5eacd3\n\t\t\t     highlight netrwDir guifg=#5eacd3\n\t\t\t     highlight qfFileName guifg=#aed75f\n\t\t\t     hi TelescopeBorder guifg=#5eacd\n\t\t\t   \bcmd\bvim\0" },
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
@@ -150,6 +166,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -196,10 +217,20 @@ _G.packer_plugins = {
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-code-action-menu"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/nvim-code-action-menu",
+    url = "https://github.com/weilbith/nvim-code-action-menu"
+  },
   ["nvim-gps"] = {
     loaded = true,
     path = "/Users/vt/.local/share/nvim/site/pack/packer/start/nvim-gps",
     url = "https://github.com/SmiteshP/nvim-gps"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = true,
+    path = "/Users/vt/.local/share/nvim/site/pack/packer/start/nvim-lightbulb",
+    url = "https://github.com/kosayoda/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -281,12 +312,16 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: gruvbox
 time([[Config for gruvbox]], true)
-try_loadstring("\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4        let g:gruvbox_contrast_dark = 'hard'\n        let g:gruvbox_invert_selection='0'\n        colorscheme gruvbox\n        highlight ColorColumn ctermbg=0 guibg=grey\n        hi SignColumn guibg=none\n        hi CursorLineNR guibg=None\n        highlight Normal guibg=none\n        highlight NormalFloat guibg=none\n        highlight FloatBorder guibg=#5eacd\n        \" highlight LineNr guifg=#ff8659\n        \" highlight LineNr guifg=#aed75f\n        highlight LineNr guifg=#5eacd3\n        highlight netrwDir guifg=#5eacd3\n        highlight qfFileName guifg=#aed75f\n        hi TelescopeBorder guifg=#5eacd\n      \bcmd\bvim\0", "config", "gruvbox")
+try_loadstring("\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4\t\t\t     let g:gruvbox_contrast_dark = 'hard'\n\t\t\t     let g:gruvbox_invert_selection='0'\n\t\t\t     colorscheme gruvbox\n\t\t\t     highlight ColorColumn ctermbg=0 guibg=grey\n\t\t\t     hi SignColumn guibg=none\n\t\t\t     hi CursorLineNR guibg=None\n\t\t\t     highlight Normal guibg=none\n\t\t\t     highlight NormalFloat guibg=none\n\t\t\t     highlight FloatBorder guibg=#5eacd\n\t\t\t     \" highlight LineNr guifg=#ff8659\n\t\t\t     \" highlight LineNr guifg=#aed75f\n\t\t\t     highlight LineNr guifg=#5eacd3\n\t\t\t     highlight netrwDir guifg=#5eacd3\n\t\t\t     highlight qfFileName guifg=#aed75f\n\t\t\t     hi TelescopeBorder guifg=#5eacd\n\t\t\t   \bcmd\bvim\0", "config", "gruvbox")
 time([[Config for gruvbox]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: dressing.nvim
+time([[Config for dressing.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
+time([[Config for dressing.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

@@ -52,3 +52,5 @@ vim.g.loaded_matchit = 1
 
 vim.g.netrw_banner = 0
 vim.g.netrw_silent = 1
+
+vim.g.cursorhold_updatetime = 100
