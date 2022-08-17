@@ -310,6 +310,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: dressing.nvim
+time([[Config for dressing.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
+time([[Config for dressing.nvim]], false)
 -- Config for: gruvbox
 time([[Config for gruvbox]], true)
 try_loadstring("\27LJ\2\nƒ\5\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0ã\4\t\t\t     let g:gruvbox_contrast_dark = 'hard'\n\t\t\t     let g:gruvbox_invert_selection='0'\n\t\t\t     colorscheme gruvbox\n\t\t\t     highlight ColorColumn ctermbg=0 guibg=grey\n\t\t\t     hi SignColumn guibg=none\n\t\t\t     hi CursorLineNR guibg=None\n\t\t\t     highlight Normal guibg=none\n\t\t\t     highlight NormalFloat guibg=none\n\t\t\t     highlight FloatBorder guibg=#5eacd\n\t\t\t     \" highlight LineNr guifg=#ff8659\n\t\t\t     \" highlight LineNr guifg=#aed75f\n\t\t\t     highlight LineNr guifg=#5eacd3\n\t\t\t     highlight netrwDir guifg=#5eacd3\n\t\t\t     highlight qfFileName guifg=#aed75f\n\t\t\t     hi TelescopeBorder guifg=#5eacd\n\t\t\t   \bcmd\bvim\0", "config", "gruvbox")
@@ -318,10 +322,6 @@ time([[Config for gruvbox]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: dressing.nvim
-time([[Config for dressing.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rdressing\frequire\0", "config", "dressing.nvim")
-time([[Config for dressing.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
