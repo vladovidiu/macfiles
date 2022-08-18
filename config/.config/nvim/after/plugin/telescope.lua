@@ -3,6 +3,8 @@ if not telescope_status_ok then
 	return
 end
 
+local map = vim.keymap.set
+
 telescope.setup({
 	extensions = {
 		fzf = {
@@ -28,3 +30,10 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 telescope.load_extension("packer")
+
+local opts = { noremap = true, silent = true }
+
+map("n", "<leader>pf", "<cmd>Telescope find_files<cr>", opts)
+map("n", "<leader>sp", "<cmd>Telescope live_grep<CR>", opts)
+map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", opts)
+map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)

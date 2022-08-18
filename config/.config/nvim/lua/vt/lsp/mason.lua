@@ -8,16 +8,6 @@ if not mason_lspconfig_status_ok then
 	return
 end
 
-local go_status_ok, go = pcall(require, "go")
-if not go_status_ok then
-	return
-end
-
-local rust_status_ok, rust_tools = pcall(require, "rust-tools")
-if not rust_status_ok then
-	return
-end
-
 mason.setup({
 	ui = {
 		icons = {
@@ -28,13 +18,6 @@ mason.setup({
 		border = "rounded",
 	},
 })
-
-go.setup({
-	test_runner = "richgo",
-	run_in_floaterm = true,
-})
-
-rust_tools.setup({})
 
 local lspconfig = require("lspconfig")
 
@@ -62,14 +45,21 @@ for _, server in pairs(servers) do
 		capabilities = require("vt.lsp.handlers").capabilities,
 	}
 	local has_custom_opts, server_custom_opts = pcall(require, "vt.lsp.settings." .. server)
+
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end
 
 	if server == "rust_analyzer" then
+		local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
+		if not rust_tools_status_ok then
+			return
+		end
+
 		local rust_opts = require("vt.lsp.settings.rust")
 
 		rust_tools.setup(rust_opts)
+
 		goto continue
 	end
 

@@ -30,7 +30,7 @@ local schemas = {
 		},
 		url = "https://json.schemastore.org/eslintrc.json",
 	},
-	{     
+	{
 		description = "Bucklescript config",
 		fileMatch = { "bsconfig.json" },
 		url = "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/8.2.0/docs/docson/build-schema.json",

@@ -1,13 +1,10 @@
-local feline_status_ok, feline = pcall(require, "feline")
-local gps_status_ok, gps = pcall(require, "nvim-gps")
-
-if not feline_status_ok or not gps_status_ok then
-	return
-end
+local status_ok, feline = pcall(require, "feline")
+if not status_ok then return end
 
 local vi_mode_utils = require("feline.providers.vi_mode")
 local lsp = require("feline.providers.lsp")
 local icons = require("nvim-web-devicons")
+local tokyonight_colors = require('tokyonight.colors').setup { style = 'storm' }
 
 local vi_mode_text = {
 	NORMAL = " NORMAL ",
@@ -49,19 +46,37 @@ local components = {
 }
 
 local colors = {
-	bg = "#282828",
-	black = "#282828",
-	yellow = "#d8a657",
-	cyan = "#89b482",
-	oceanblue = "#45707a",
-	green = "#a9b665",
-	orange = "#e78a4e",
-	violet = "#d3869b",
-	magenta = "#c14a4a",
-	white = "#a89984",
-	fg = "#a89984",
-	skyblue = "#7daea3",
-	red = "#ea6962",
+    bg = tokyonight_colors.bg_statusline,
+    fg = tokyonight_colors.fg,
+    yellow = tokyonight_colors.yellow,
+    cyan = tokyonight_colors.cyan,
+    darkblue = tokyonight_colors.blue0,
+    green = tokyonight_colors.green,
+    orange = tokyonight_colors.orange,
+    violet = tokyonight_colors.purple,
+    magenta = tokyonight_colors.magenta,
+    blue = tokyonight_colors.blue,
+    red = tokyonight_colors.red,
+    light_bg = tokyonight_colors.bg_highlight,
+    primary_blue = tokyonight_colors.blue5,
+}
+
+local vi_mode_colors = {
+    NORMAL = colors.blue,
+    OP = colors.primary_blue,
+    INSERT = colors.yellow,
+    VISUAL = colors.magenta,
+    LINES = colors.magenta,
+    BLOCK = colors.magenta,
+    REPLACE = colors.red,
+    ['V-REPLACE'] = colors.red,
+    ENTER = colors.cyan,
+    MORE = colors.cyan,
+    SELECT = colors.orange,
+    COMMAND = colors.primary_blue,
+    SHELL = colors.green,
+    TERM = colors.green,
+    NONE = colors.green,
 }
 
 -- LEFT
@@ -162,21 +177,6 @@ components.active[1][7] = {
 }
 
 -- MIDDLE
-
--- nvim-gps
-components.active[2][1] = {
-	provider = function()
-		return gps.get_location()
-	end,
-	enabled = function()
-		return gps.is_available()
-	end,
-	hl = {
-		fg = "white",
-		bg = "bg",
-		style = "bold",
-	},
-}
 
 -- diagnosticErrors
 components.active[2][5] = {
@@ -385,5 +385,6 @@ components.inactive[1][1] = {
 feline.setup({
 	theme = colors,
 	components = components,
+    vi_mode_colors = vi_mode_colors,
 	force_inactive = force_inactive,
 })
