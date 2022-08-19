@@ -11,7 +11,6 @@ neogit.setup({})
 map("n", "<leader>gg", "<cmd>Neogit<cr>", opts)
 
 vim.cmd([[
-    
     highlight diffAdded guifg=#449dab
     highlight NeogitDiffAdd guifg=#449dab
 
@@ -23,4 +22,6 @@ vim.cmd([[
 
     highlight NeogitDiffAddHighlight guifg=#449dab guibg=#449dab
     highlight NeogitDiffDeleteHighlight guifg=#914c54 guibg=#914c54
+
+    highlight NeogitDiffContextHighlight guibg=none guifg=#a9b1d6
 ]])

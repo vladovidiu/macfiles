@@ -39,6 +39,7 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim") -- speeds up loading lua modules
 	use("max397574/better-escape.nvim") -- fixes the delay for quick escape jk
 	use("windwp/nvim-autopairs") -- completes pairs
+	use("numToStr/Comment.nvim")
 
 	-- Themes
 	use("folke/tokyonight.nvim") -- main theme for now
@@ -49,6 +50,7 @@ return packer.startup(function(use)
 	-- UI improvements
 	use("kyazdani42/nvim-web-devicons") -- adds icons to files
 	use("rcarriga/nvim-notify") -- beautiful notifiers
+	use("norcalli/nvim-colorizer.lua") -- adds colour to colour codes
 
 	-- Fuzzy Finder
 	use("nvim-telescope/telescope.nvim")
@@ -64,6 +66,7 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("ray-x/lsp_signature.nvim")
 	use("glepnir/lspsaga.nvim")
+	use("folke/trouble.nvim")
 
 	-- Completion
 	use("hrsh7th/nvim-cmp") -- The completion plugin
