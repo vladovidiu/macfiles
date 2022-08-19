@@ -1,10 +1,12 @@
 local status_ok, feline = pcall(require, "feline")
-if not status_ok then return end
+if not status_ok then
+	return
+end
 
 local vi_mode_utils = require("feline.providers.vi_mode")
 local lsp = require("feline.providers.lsp")
 local icons = require("nvim-web-devicons")
-local tokyonight_colors = require('tokyonight.colors').setup { style = 'storm' }
+local tokyonight_colors = require("tokyonight.colors").setup({ style = "storm" })
 
 local vi_mode_text = {
 	NORMAL = " NORMAL ",
@@ -46,37 +48,37 @@ local components = {
 }
 
 local colors = {
-    bg = tokyonight_colors.bg_statusline,
-    fg = tokyonight_colors.fg,
-    yellow = tokyonight_colors.yellow,
-    cyan = tokyonight_colors.cyan,
-    darkblue = tokyonight_colors.blue0,
-    green = tokyonight_colors.green,
-    orange = tokyonight_colors.orange,
-    violet = tokyonight_colors.purple,
-    magenta = tokyonight_colors.magenta,
-    blue = tokyonight_colors.blue,
-    red = tokyonight_colors.red,
-    light_bg = tokyonight_colors.bg_highlight,
-    primary_blue = tokyonight_colors.blue5,
+	bg = tokyonight_colors.bg_statusline,
+	fg = tokyonight_colors.fg,
+	yellow = tokyonight_colors.yellow,
+	cyan = tokyonight_colors.cyan,
+	darkblue = tokyonight_colors.blue0,
+	green = tokyonight_colors.green,
+	orange = tokyonight_colors.orange,
+	violet = tokyonight_colors.purple,
+	magenta = tokyonight_colors.magenta,
+	blue = tokyonight_colors.blue,
+	red = tokyonight_colors.red,
+	light_bg = tokyonight_colors.bg_highlight,
+	primary_blue = tokyonight_colors.blue5,
 }
 
 local vi_mode_colors = {
-    NORMAL = colors.blue,
-    OP = colors.primary_blue,
-    INSERT = colors.yellow,
-    VISUAL = colors.magenta,
-    LINES = colors.magenta,
-    BLOCK = colors.magenta,
-    REPLACE = colors.red,
-    ['V-REPLACE'] = colors.red,
-    ENTER = colors.cyan,
-    MORE = colors.cyan,
-    SELECT = colors.orange,
-    COMMAND = colors.primary_blue,
-    SHELL = colors.green,
-    TERM = colors.green,
-    NONE = colors.green,
+	NORMAL = colors.blue,
+	OP = colors.primary_blue,
+	INSERT = colors.yellow,
+	VISUAL = colors.magenta,
+	LINES = colors.magenta,
+	BLOCK = colors.magenta,
+	REPLACE = colors.red,
+	["V-REPLACE"] = colors.red,
+	ENTER = colors.cyan,
+	MORE = colors.cyan,
+	SELECT = colors.orange,
+	COMMAND = colors.primary_blue,
+	SHELL = colors.green,
+	TERM = colors.green,
+	NONE = colors.green,
 }
 
 -- LEFT
@@ -141,7 +143,7 @@ components.active[1][3] = {
 components.active[1][4] = {
 	provider = "git_branch",
 	hl = {
-		fg = "yellow",
+		fg = colors.magenta,
 		bg = "bg",
 		style = "bold",
 	},
@@ -179,7 +181,7 @@ components.active[1][7] = {
 -- MIDDLE
 
 -- diagnosticErrors
-components.active[2][5] = {
+components.active[2][1] = {
 	provider = "diagnostic_errors",
 	enabled = function()
 		return lsp.diagnostics_exist(vim.diagnostic.severity.ERROR)
@@ -191,7 +193,7 @@ components.active[2][5] = {
 }
 
 -- diagnosticWarn
-components.active[2][6] = {
+components.active[2][2] = {
 	provider = "diagnostic_warnings",
 	enabled = function()
 		return lsp.diagnostics_exist(vim.diagnostic.severity.WARN)
@@ -203,7 +205,7 @@ components.active[2][6] = {
 }
 
 -- diagnosticHint
-components.active[2][7] = {
+components.active[2][3] = {
 	provider = "diagnostic_hints",
 	enabled = function()
 		return lsp.diagnostics_exist(vim.diagnostic.severity.HINT)
@@ -215,7 +217,7 @@ components.active[2][7] = {
 }
 
 -- diagnosticInfo
-components.active[2][8] = {
+components.active[2][4] = {
 	provider = "diagnostic_info",
 	enabled = function()
 		return lsp.diagnostics_exist(vim.diagnostic.severity.INFO)
@@ -231,9 +233,10 @@ components.active[2][8] = {
 -- lsp name
 components.active[3][1] = {
 	provider = "lsp_client_names",
-	enabled = false,
+	enabled = true,
+	icon = icons.lsp,
 	hl = {
-		fg = "yellow",
+		fg = "blue",
 		bg = "bg",
 		style = "bold",
 	},
@@ -348,7 +351,7 @@ components.active[3][7] = {
 components.active[3][8] = {
 	provider = "scroll_bar",
 	hl = {
-		fg = "yellow",
+		fg = "blue",
 		bg = "bg",
 	},
 }
@@ -385,6 +388,6 @@ components.inactive[1][1] = {
 feline.setup({
 	theme = colors,
 	components = components,
-    vi_mode_colors = vi_mode_colors,
+	vi_mode_colors = vi_mode_colors,
 	force_inactive = force_inactive,
 })
