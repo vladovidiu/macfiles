@@ -15,11 +15,13 @@ null_ls.setup({
 	sources = {
 		diagnostics.eslint_d,
 		diagnostics.golangci_lint,
+		diagnostics.rubocop,
 
 		formatting.prettierd,
 		formatting.stylua,
 		formatting.gofmt,
 		formatting.rustfmt,
+		formatting.rufo,
 	},
 	on_attach = function(client)
 		if client.server_capabilities.documentFormattingProvider then

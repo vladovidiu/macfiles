@@ -31,6 +31,7 @@ local servers = {
 	"tailwindcss",
 	"rust_analyzer",
 	"taplo",
+	"sorbet",
 }
 
 mason_lspconfig.setup({
