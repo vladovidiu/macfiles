@@ -1,7 +1,7 @@
 local M = {}
 
 M.setup = function()
-    local signs = {
+	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
 		{ name = "DiagnosticSignWarn", text = "" },
 		{ name = "DiagnosticSignHint", text = "" },
@@ -44,7 +44,7 @@ end
 local function lsp_keymaps(_, client)
 	local opts = { noremap = true, silent = true }
 	vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	vim.keymap.set("n", "gd", "<cmd>Lspsaga preview_definition<CR>", opts)
+	vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", opts)
 	vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 	vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
@@ -52,12 +52,7 @@ local function lsp_keymaps(_, client)
 	vim.keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
 	vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 	vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-	vim.keymap.set(
-		"n",
-		"gl",
-		'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
-		opts
-	)
+	vim.keymap.set("n", "gl", '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
 	vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 	vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format({ async = true })' ]])
@@ -69,11 +64,9 @@ local function lsp_keymaps(_, client)
 end
 
 M.on_attach = function(client, bufnr)
-    if client.name == "tsserver" or
-        client.name == "gopls" or
-        client.name == "sumneko_lua" then
-        client.server_capabilities.documentFormattingProvider = false
-    end
+	if client.name == "tsserver" or client.name == "gopls" or client.name == "sumneko_lua" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
 
 	lsp_keymaps(bufnr, client)
 end

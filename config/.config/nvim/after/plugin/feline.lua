@@ -236,7 +236,7 @@ components.active[3][1] = {
 	enabled = true,
 	icon = icons.lsp,
 	hl = {
-		fg = "blue",
+		fg = colors.magenta,
 		bg = "bg",
 		style = "bold",
 	},

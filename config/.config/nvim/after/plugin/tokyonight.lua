@@ -16,4 +16,5 @@ vim.cmd([[
     highlight DiagnosticVirtualTextInfo guibg=none
     highlight DiagnosticVirtualTextHint guibg=none
     highlight LspFloatWinNormal guibg=none
+    highlight CursorLineNr guifg=#bb9af7
 ]])

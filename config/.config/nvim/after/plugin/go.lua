@@ -5,6 +5,7 @@ if not status_ok then
 end
 
 go.setup({
-	notify = true,
+	notify = false,
 	linter = "revive",
+	lint_prompt_style = "vt",
 })
