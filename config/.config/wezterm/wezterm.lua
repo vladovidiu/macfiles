@@ -6,7 +6,7 @@ return {
 	window_background_opacity = 0.95,
 	text_background_opacity = 1.0,
 	font = wezterm.font("PragmataPro Mono Liga"),
-	font_size = 20.0,
+	font_size = 22.0,
 	window_decorations = "RESIZE",
 	window_padding = {
 		left = 2,

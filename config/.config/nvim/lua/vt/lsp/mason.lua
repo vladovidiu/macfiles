@@ -32,6 +32,7 @@ local servers = {
 	"rust_analyzer",
 	"taplo",
 	"sorbet",
+	"graphql",
 }
 
 mason_lspconfig.setup({
