@@ -4,5 +4,6 @@
  ("spacemacs" . ((user-emacs-directory . "~/emacs-configs/spacemacs")
                  (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
  ("prelude" . ((user-emacs-directory . "~/emacs-configs/emacs-prelude")))
+ ("vt" . ((user-emacs-directory . "~/emacs-configs/vt")))
  ("nano" . ((user-emacs-directory . "~/emacs-configs/nano-emacs")))
  )

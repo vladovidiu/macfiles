@@ -1,1 +1,8 @@
 config/.config/nvim/.vim
+emacs-configs/emacs-configs/vt/eln-cache/
+emacs-configs/emacs-configs/vt/etc/
+emacs-configs/emacs-configs/vt/var/
+emacs-configs/emacs-configs/vt/straight/
+emacs-configs/emacs-configs/vt/undo-fu-session/
+emacs-configs/emacs-configs/vt/history
+
