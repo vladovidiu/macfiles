@@ -18,6 +18,9 @@
 ;;
 ;;; Code:
 
+;; Dependencies
+(straight-use-package 'no-littering)
+
 ;; Revert Dired and other buffers
 (customize-set-variable 'global-auto-revert-non-file-buffers t)
 
@@ -54,6 +57,33 @@
 
 ;; Enable save-hist mode for command history
 (savehist-mode 1)
+
+;; Set a custom file
+(setq custom-file
+      (if (boundp 'server-socket-dir)
+          (expand-file-name "custom.el" server-socket-dir)
+        (expand-file-name (format "emacs-custom-%s.el" (user-uid)) temporary-file-directory)))
+(load custom-file t)
+
+;; Saner defaults
+(setq-default
+ create-lockfiles nil
+ auto-save-default nil
+ auto-windows-vscroll nil
+ delete-by-moving-to-trash t
+ fill-column 80
+ enable-recursive-minibuffers t
+ help-window-select t
+ x-stretch-cursor t
+ echo-keystrokes 0.1
+ tab-always-indent 'complete
+ ring-bell-function 'ignore
+ vc-follow-symlinks t)
+
+(setq backup-directory-alist '(("." . "~/.save")))
+
+;; Use ibuffer instead of *Buffer List*
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (provide 'vt-defaults)
 ;;; vt-defaults.el ends here

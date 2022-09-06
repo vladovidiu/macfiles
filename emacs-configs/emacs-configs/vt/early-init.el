@@ -28,6 +28,9 @@
 ;; Don't use package.el, but rather straight.el
 (setq package-enable-at-startup nil)
 
+;; Fix tiling gap
+(customize-set-variable 'frame-resize-pixelwise t)
+
 ;; Remove unneeded UI elements
 (setq inhibit-startup-message t)
 (push '(tool-bar-lines . 0) default-frame-alist)

@@ -5,4 +5,6 @@ emacs-configs/emacs-configs/vt/var/
 emacs-configs/emacs-configs/vt/straight/
 emacs-configs/emacs-configs/vt/undo-fu-session/
 emacs-configs/emacs-configs/vt/history
-
+emacs-configs/emacs-configs/vt/.cache/
+emacs-configs/emacs-configs/vt/.lsp-session-v1
+emacs-configs/emacs-configs/vt/eshell/

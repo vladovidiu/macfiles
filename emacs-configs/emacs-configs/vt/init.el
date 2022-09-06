@@ -41,6 +41,31 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
+;; When writing vt-modules, insert header from skeleton
+(auto-insert-mode)
+(with-eval-after-load "autoinsert"
+  (define-auto-insert
+    (cons (concat (expand-file-name user-emacs-directory) "modules/vt-.*\\.el")
+          "vt Emacs Lisp Skeleton")
+    '("vt Emacs Module Description: "
+      ";;;; " (file-name-nondirectory (buffer-file-name)) " --- " str
+      (make-string (max 2 (- 80 (current-column) 27)) ?\s)
+      "-*- lexical-binding: t; -*-" '(setq lexical-binding t)
+      "
+
+;; Author: Vlad Tutunea
+
+;;; Commentary:
+
+;; " _ "
+
+;;; Code:
+
+(provide '"
+       (file-name-base (buffer-file-name))
+       ")
+;;; " (file-name-nondirectory (buffer-file-name)) " ends here\n")))
+
 (defvar vt-config-file (expand-file-name "config.el" vt-config-path)
   "The Emacs config file.")
 (defvar vt-config-etc-directory (expand-file-name "etc/" vt-config-path)
@@ -54,6 +79,9 @@
 ;; Load the config file if it exists
 (when (file-exists-p vt-config-file)
   (load vt-config-file nil 'nomessage))
+
+(require 'vt-startup)
+(setq initial-buffer-choice #'vt-startup-screen)
 
 ;; Make GC pauses faster by decreasing the threshold
 (setq gc-cons-threshold (* 2 1000 1000))
