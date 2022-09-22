@@ -16,12 +16,6 @@
 (straight-use-package 'lsp-ui)
 (straight-use-package 'flycheck)
 
-;; Line numbers
-(customize-set-variable 'display-line-numbers-type 'relative)
-(defun vt-programming/display-line-numbers-hook ()
-  (display-line-numbers-mode 1))
-(add-hook 'prog-mode-hook 'vt-programming/display-line-numbers-hook)
-
 ;; Parentheses
 (electric-pair-mode 1)
 

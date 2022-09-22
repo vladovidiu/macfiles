@@ -19,7 +19,7 @@
 
 (defconst vt-startup-text
   `((:face (variable-pitch font-lock-comment-face (:height 1.5) bold)
-           ,(let* ((welcome-text "Welcome to Emacs!\n\n")
+           ,(let* ((welcome-text "Welcome to Emacs, Vlad!\n\n")
                    (welcome-len (length welcome-text))
                    (welcome-mid (/ welcome-len 2)))
               (concat

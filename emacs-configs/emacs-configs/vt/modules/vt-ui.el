@@ -21,7 +21,12 @@
 (display-time-mode 1)
 (set-fringe-mode 10)
 (global-hl-line-mode 1)
+
+;;; Line Numbers
+(customize-set-variable 'display-line-numbers-type 'relative)
 (setq display-line-numbers-width t)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(save-place-mode 1)
 
 ;;; ns-auto-titlebar
 (when (eq system-type 'darwin) (ns-auto-titlebar-mode))

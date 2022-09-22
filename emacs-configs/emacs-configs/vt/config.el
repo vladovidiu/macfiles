@@ -29,6 +29,6 @@
 
 (progn
   (disable-theme 'deeper-blue)
-  (load-theme 'ef-dark t))
+  (load-theme 'ef-duo-dark t))
 
 ;;; config.el ends here
