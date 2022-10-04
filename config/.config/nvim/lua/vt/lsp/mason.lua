@@ -45,6 +45,9 @@ for _, server in pairs(servers) do
 	local opts = {
 		on_attach = require("vt.lsp.handlers").on_attach,
 		capabilities = require("vt.lsp.handlers").capabilities,
+		flags = {
+			debounce_text_changes = 150,
+		},
 	}
 	local has_custom_opts, server_custom_opts = pcall(require, "vt.lsp.settings." .. server)
 
