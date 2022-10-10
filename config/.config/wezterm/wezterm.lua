@@ -3,7 +3,7 @@ local act = wezterm.action
 
 return {
 	color_scheme = "tokyonight",
-	window_background_opacity = 0.95,
+	window_background_opacity = 1.0,
 	text_background_opacity = 1.0,
 	font = wezterm.font("PragmataPro Mono Liga"),
 	font_size = 22.0,
