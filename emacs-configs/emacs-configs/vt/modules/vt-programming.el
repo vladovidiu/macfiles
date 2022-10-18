@@ -46,7 +46,7 @@
 (customize-set-variable 'lsp-ui-doc-max-width 72)
 (customize-set-variable 'lsp-ui-doc-delay 0.75)
 (customize-set-variable 'lsp-ui-doc-show-with-mouse nil)
-(customize-set-variable 'lsp-ui-doc-position 'bottom)
+(customize-set-variable 'lsp-ui-doc-position 'at-point)
 (customize-set-variable 'lsp-ui-sideline-ignore-duplicate t)
 
 ;; Start lsp and lsp ui

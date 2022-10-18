@@ -14,8 +14,8 @@ return {
 			only_current_line_autocmd = "CursorHold",
 			show_parameter_hints = false,
 			show_variable_name = false,
-			parameter_hints_prefix = " ",
-			other_hints_prefix = " ",
+			-- parameter_hints_prefix = " ",
+			-- other_hints_prefix = " ",
 			max_len_align = false,
 			max_len_align_padding = 1,
 			right_align = false,
@@ -39,7 +39,16 @@ return {
 					enable = true,
 				},
 				checkOnSave = {
-					command = "clippy",
+					-- command = "clippy",
+					allFeatures = true,
+					overrideCommand = {
+						"cargo",
+						"clippy",
+						"--workspace",
+						"--message-format=json",
+						"--all-targets",
+						"--all-features",
+					},
 				},
 				assist = {
 					importEnforceGranularity = true,

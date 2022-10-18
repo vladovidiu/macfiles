@@ -32,9 +32,6 @@ opt.signcolumn = "yes"
 
 opt.showmode = false
 
-opt.winblend = 0
-opt.pumblend = 0
-
 -- Indenting
 opt.tabstop = 4
 opt.softtabstop = 4
@@ -43,9 +40,9 @@ opt.expandtab = true
 opt.smartindent = true
 
 -- Clipboard
-opt.clipboard:append { "unnamedplus" }
+opt.clipboard:append({ "unnamedplus" })
 
-opt.backspace = { 'start', 'eol', 'indent' }
+opt.backspace = { "start", "eol", "indent" }
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -59,30 +56,30 @@ vim.g.netrw_silent = 1
 
 -- Disable unneeded builtin plugins
 local default_plugins = {
-    "2html_plugin",
-    "getscript",
-    "getscriptPlugin",
-    "gzip",
-    "logipat",
-    "machparen",
-    "matchit",
-    "tar",
-    "tarPlugin",
-    "rrhelper",
-    "spellfile_plugin",
-    "vimball",
-    "vimballPlugin",
-    "zip",
-    "zipPlugin",
-    "tutor",
-    "rplugin",
-    "synmenu",
-    "optwin",
-    "compiler",
-    "bugreport",
-    "ftplugin",
+	"2html_plugin",
+	"getscript",
+	"getscriptPlugin",
+	"gzip",
+	"logipat",
+	"machparen",
+	"matchit",
+	"tar",
+	"tarPlugin",
+	"rrhelper",
+	"spellfile_plugin",
+	"vimball",
+	"vimballPlugin",
+	"zip",
+	"zipPlugin",
+	"tutor",
+	"rplugin",
+	"synmenu",
+	"optwin",
+	"compiler",
+	"bugreport",
+	"ftplugin",
 }
 
 for _, plugin in pairs(default_plugins) do
-    vim.g["loaded_" .. plugin] = 1
+	vim.g["loaded_" .. plugin] = 1
 end

@@ -17,6 +17,7 @@
 ;; Optional
 (require 'vt-programming)
 (require 'vt-ruby)
+(require 'vt-rust)
 
 ;; Set the default face.
 (add-hook 'emacs-startup-hook
@@ -29,6 +30,6 @@
 
 (progn
   (disable-theme 'deeper-blue)
-  (load-theme 'ef-duo-dark t))
+  (load-theme 'ef-autumn t))
 
 ;;; config.el ends here

@@ -41,3 +41,5 @@ cask 'obsidian'
 
 cask 'discord'
 cask 'gog-galaxy'
+
+cask 'calibre'

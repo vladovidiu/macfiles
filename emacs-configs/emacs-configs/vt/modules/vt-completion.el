@@ -91,6 +91,9 @@ folder, otherwise delete a word."
   (add-hook 'embark-collect-mode-hook #'consult-preview-at-point-mode))
 
 ;;; Corfu
+(add-to-list 'load-path (expand-file-name "straight/build/corfu/extensions" straight-base-dir))
+(require 'corfu-history)
+
 (customize-set-variable 'corfu-cycle t)
 (customize-set-variable 'corfu-auto t)
 (customize-set-variable 'corfu-auto-prefix 2)
@@ -108,6 +111,7 @@ folder, otherwise delete a word."
 (customize-set-variable 'corfu-doc-max-height 20)
 
 (global-corfu-mode 1)
+(corfu-history-mode 1)
 
 (define-key corfu-map (kbd "TAB") 'corfu-next)
 (define-key corfu-map [tab] 'corfu-next)

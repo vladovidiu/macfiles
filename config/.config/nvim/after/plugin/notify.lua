@@ -4,7 +4,8 @@ if not status_ok then
 end
 
 notify.setup({
-	background_colour = "#24283b",
+	background_colour = "#000000",
+	fps = 60,
 })
 
 vim.notify = notify
