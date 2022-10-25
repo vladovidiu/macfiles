@@ -1,4 +1,4 @@
-;;;; vt-programming.el --- Programming Module        -*- lexical-binding: t; -*-
+;;;; vt-programming.el --- Programming Module -*- lexical-binding: t; -*-
 
 ;; Author: Vlad Tutunea
 
@@ -42,12 +42,18 @@
 (customize-set-variable 'lsp-completion-provider :none)
 (customize-set-variable 'lsp-headerline-breadcrumb-enable nil)
 (customize-set-variable 'lsp-ui-peek-enable t)
+;; (customize-set-variable 'lsp-ui-peek-always-show t)
+;; (customize-set-variable 'lsp-ui-sideline-show-hover t)
 (customize-set-variable 'lsp-ui-doc-max-height 14)
 (customize-set-variable 'lsp-ui-doc-max-width 72)
 (customize-set-variable 'lsp-ui-doc-delay 0.75)
 (customize-set-variable 'lsp-ui-doc-show-with-mouse nil)
 (customize-set-variable 'lsp-ui-doc-position 'at-point)
 (customize-set-variable 'lsp-ui-sideline-ignore-duplicate t)
+;; (customize-set-variable 'lsp-eldoc-render-all t)
+
+;; Keybindings
+(global-set-key (kbd "C-h .") 'lsp-ui-doc-focus-frame)
 
 ;; Start lsp and lsp ui
 (add-hook 'c-mode-hook 'lsp-deferred)

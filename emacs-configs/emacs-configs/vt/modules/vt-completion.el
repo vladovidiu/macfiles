@@ -50,6 +50,7 @@ folder, otherwise delete a word."
 
 (add-to-list 'load-path (expand-file-name "straight/build/vertico/extensions" straight-base-dir))
 (require 'vertico-directory)
+(require 'vertico-flat)
 
 (with-eval-after-load 'evil
   (define-key vertico-map (kbd "M-h") 'vertico-directory-up))
@@ -57,6 +58,10 @@ folder, otherwise delete a word."
 (customize-set-variable 'vertico-cycle t)
 
 (vertico-mode 1)
+(vertico-flat-mode 1)
+
+(define-key vertico-map "?" #'minibuffer-completion-help)
+(define-key vertico-map (kbd "M-RET") #'minibuffer-force-complete-and-exit)
 
 ;;; Marginalia
 (require 'marginalia)

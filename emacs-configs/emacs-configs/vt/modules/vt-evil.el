@@ -54,11 +54,17 @@
 ;; Rebind `universal-argument' to 'C-M-u' since 'C-u' now scrolls the buffer
 (global-set-key (kbd "C-M-u") 'universal-argument)
 
+(evil-collection-init)
+
+;;; Keybinds
 ;; Use visual line motions even outside of visual-line-mode buffers
 (evil-global-set-key 'motion "j" 'evil-next-visual-line)
 (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
 
-(evil-collection-init)
+(evil-global-set-key 'normal "]e" 'next-error)
+(evil-global-set-key 'motion "]e" 'next-error)
+(evil-global-set-key 'normal "[e" 'previous-error)
+(evil-global-set-key 'motion "[e" 'previous-error)
 
 (provide 'vt-evil)
 ;;; vt-evil.el ends here

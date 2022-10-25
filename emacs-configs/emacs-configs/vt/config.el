@@ -30,6 +30,9 @@
 
 (progn
   (disable-theme 'deeper-blue)
-  (load-theme 'ef-autumn t))
+  (load-theme 'gruber-darker t))
+
+;; Keybindings
+(evil-global-set-key 'motion "K" 'lsp-ui-doc-glance)
 
 ;;; config.el ends here

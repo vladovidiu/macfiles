@@ -10,6 +10,7 @@
 
 ;; Install dependencies
 (straight-use-package '(ef-themes :type git :host github :repo "protesilaos/ef-themes"))
+(straight-use-package 'gruber-darker-theme)
 (straight-use-package 'all-the-icons)
 (straight-use-package 'helpful)
 (straight-use-package 'elisp-demos)
