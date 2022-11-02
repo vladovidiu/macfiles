@@ -21,7 +21,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.gofmt,
 		formatting.rustfmt,
-		formatting.rufo,
+		-- formatting.rufo,
 	},
 	on_attach = function(client)
 		if client.server_capabilities.documentFormattingProvider then

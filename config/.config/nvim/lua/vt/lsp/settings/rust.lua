@@ -28,6 +28,9 @@ return {
 			width = 60,
 			-- height = 30,
 		},
+		runnables = {
+			use_telescope = true,
+		},
 	},
 	server = {
 		on_attach = require("vt.lsp.handlers").on_attach,

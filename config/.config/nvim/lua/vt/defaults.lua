@@ -14,7 +14,7 @@ opt.undodir = vim.fn.stdpath("cache") .. "/undodir"
 -- UI changes
 opt.termguicolors = true
 opt.timeoutlen = 300
-opt.updatetime = 300
+opt.updatetime = 100
 opt.scrolloff = 5
 opt.colorcolumn = "80"
 opt.cmdheight = 1

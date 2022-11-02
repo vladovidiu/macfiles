@@ -89,5 +89,35 @@ recognized:
 ;;; Minitest
 (add-hook 'minitest-mode-hook #'evil-normalize-keymaps)
 
+;;; Sorbet
+(require 'lsp-mode)
+
+(defgroup lsp-sorbet nil
+  "LSP support for Ruby, using the Sorbet language server."
+  :group 'lsp-mode
+  :link '(url-link "https://github.com/sorbet/sorbet")
+  :package-version '(lsp-mode . "7.1.0"))
+
+(defcustom lsp-sorbet-use-bundler nil
+  "Run sorbet under bundler"
+  :type 'boolean
+  :group 'lsp-sorbet
+  :package-version '(lsp-mode . "7.1.0"))
+
+(defun lsp-sorbet--build-command ()
+  "Build sorbet command"
+  (let ((lsp-command '("srb" "typecheck" "--lsp" "--disable-watchman")))
+    (if lsp-sorbet-use-bundler
+              (append '("bundle" "exec") lsp-command)
+            lsp-command)))
+
+(lsp-register-client
+ (make-lsp-client
+  :new-connection (lsp-stdio-connection
+                   #'lsp-sorbet--build-command)
+  :priority 100
+  :major-modes '(ruby-mode)
+  :server-id 'sorbet-ls))
+
 (provide 'vt-ruby)
 ;;; vt-ruby.el ends here
