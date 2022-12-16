@@ -1,5 +1,6 @@
 local telescope_status_ok, telescope = pcall(require, "telescope")
-if not telescope_status_ok then
+local builtin_status_ok, builtin = pcall(require, "telescope.builtin")
+if not telescope_status_ok or not builtin_status_ok then
 	return
 end
 
@@ -33,7 +34,11 @@ telescope.load_extension("packer")
 
 local opts = { noremap = true, silent = true }
 
-map("n", "<leader>pf", "<cmd>Telescope find_files<cr>", opts)
-map("n", "<leader>sp", "<cmd>Telescope live_grep<CR>", opts)
-map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", opts)
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+map("n", "<leader>pf", builtin.find_files, opts)
+map("n", "<leader>gf", builtin.git_files, opts)
+map("n", "<leader>sp", builtin.live_grep, opts)
+map("n", "<leader>bb", builtin.buffers, opts)
+map("n", "<leader>fh", builtin.help_tags, opts)
+map("n", "<leader>gp", function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end, opts)
