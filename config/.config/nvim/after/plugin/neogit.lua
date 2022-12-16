@@ -1,6 +1,6 @@
 local status_ok, neogit = pcall(require, "neogit")
 if not status_ok then
-	return
+    return
 end
 
 local map = vim.keymap.set
