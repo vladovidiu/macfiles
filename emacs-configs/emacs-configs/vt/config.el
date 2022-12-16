@@ -18,6 +18,7 @@
 (require 'vt-programming)
 (require 'vt-ruby)
 (require 'vt-rust)
+(require 'vt-lisp)
 
 ;; Set the default face.
 (add-hook 'emacs-startup-hook

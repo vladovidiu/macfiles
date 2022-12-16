@@ -5,6 +5,8 @@ local map = vim.keymap.set
 
 map("", "<Space>", "<Nop>", opts)
 
+map("n", "<leader>pv", vim.cmd.Ex)
+
 map("n", "<leader><esc>", "<cmd>nohlsearch<cr>", opts)
 
 map("v", "<", "<gv", opts)

@@ -6,4 +6,5 @@
  ("prelude" . ((user-emacs-directory . "~/emacs-configs/emacs-prelude")))
  ("vt" . ((user-emacs-directory . "~/emacs-configs/vt")))
  ("nano" . ((user-emacs-directory . "~/emacs-configs/nano-emacs")))
+ ("personal" . ((user-emacs-directory . "~/Developer/emacs")))
  )

@@ -94,5 +94,19 @@
   (toggle-read-only))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
+;;; Switch Theme
+(defun switch-theme (theme)
+  "Disable active theme and load THEME."
+  (interactive
+   (list
+    (intern (completing-read "Load theme: "
+                             (mapc 'symbol-name
+                                   (custom-available-themes))))))
+  (let ((enabled-themes custom-enabled-themes))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme theme t)))
+
+(global-set-key (kbd "C-c T") 'switch-theme)
+
 (provide 'vt-ui)
 ;;; vt-ui.el ends here
