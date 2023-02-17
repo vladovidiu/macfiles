@@ -13,7 +13,7 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 null_ls.setup({
 	debug = false,
 	sources = {
-		diagnostics.eslint_d,
+		diagnostics.eslint,
 		diagnostics.golangci_lint,
 		diagnostics.rubocop,
 

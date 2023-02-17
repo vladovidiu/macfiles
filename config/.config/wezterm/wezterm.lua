@@ -1,9 +1,14 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+local light_colors = require("lua/rose-pine-dawn").colors()
+local colors = require("lua/rose-pine").colors()
+local window_frame = require("lua/rose-pine").window_frame()
 
 return {
-	color_scheme = "tokyonight",
-	window_background_opacity = 1.0,
+	-- color_scheme = "Gruvbox dark, hard (base16)",
+	colors = colors,
+	window_frame = window_frame,
+	window_background_opacity = 0.90,
 	text_background_opacity = 1.0,
 	font = wezterm.font("PragmataPro Mono Liga"),
 	font_size = 24.0,
